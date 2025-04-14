@@ -1,9 +1,25 @@
-package com.aluracurso.radioalura.modelos;
+package com.aluracursos.radioalura.modelos;
 
 public class Cancion extends Audio {
     private String album;
     private String cantante;
     private String genero;
+
+    @Override
+    public int getClasificacion() {
+        if (getTotalDeMeGusta() >5000){
+            return 8;
+        } else {
+            return 4;
+        }
+    }
+
+    @Override
+    public String toString() {
+        return "CANCION " + getTitulo() + " - " + cantante +
+                " | Álbum: " + album + " | Género: " + genero +
+                " | Likes: " + getTotalDeMeGusta() + " | Reproducciones: " + getTotalDeReproducciones();
+    }
 
     public String getAlbum() {
         return album;

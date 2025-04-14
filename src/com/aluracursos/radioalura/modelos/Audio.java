@@ -1,4 +1,4 @@
-package com.aluracurso.radioalura.modelos;
+package com.aluracursos.radioalura.modelos;
 
 public class Audio {
     private String titulo;
@@ -44,5 +44,10 @@ public class Audio {
 
     public void reproduce(){
         this.totalDeReproducciones++;
+    }
+
+    @Override
+    public String toString() {
+        return "Título: " + titulo + " | Likes: " + totalDeMeGusta + " | Reproducciones: " + totalDeReproducciones;
     }
 }

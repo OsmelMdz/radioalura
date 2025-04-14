@@ -1,6 +1,6 @@
 package com.aluracursos.radioalura.modelos;
 
-public class Podcats extends Audio {
+public class Podcasts extends Audio {
     private String presentador;
     private String descripcion;
 
@@ -11,6 +11,15 @@ public class Podcats extends Audio {
         } else {
             return 2;
         }
+    }
+
+    @Override
+    public String toString() {
+        return "PODCAST " + getTitulo() +
+                " | Presentador: " + presentador +
+                " | Descripción: " + descripcion +
+                " | Likes: " + getTotalDeMeGusta() +
+                " | Reproducciones: " + getTotalDeReproducciones();
     }
 
     public String getPresentador() {
